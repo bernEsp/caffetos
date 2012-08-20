@@ -1,4 +1,7 @@
 class PhotosController < ApplicationController
+  before_filter :authenticate_admin!
+  layout "admin"
+  
   def index
     @photos = Photo.all
     @photo = Photo.new
@@ -36,10 +39,9 @@ class PhotosController < ApplicationController
   
   def destroy
     @photo = Photo.find(params[:id]) 
-    if @photo.destroy
-      redirect_to photos_path
-    else
-      redirect_to photos_path   
+    @photo.destroy
+    respond_to do |format|
+      format.js
     end
   end
   

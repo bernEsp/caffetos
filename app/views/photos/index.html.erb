@@ -1,17 +1,21 @@
-<div class="span4">
+<div class="uploader">
 	<%= simple_form_for @photo, :html => {:multipart => true} do |f| %>
 
-
+     <%= image_tag(@photo.thumb) if @photo.image? %>
 	  <%= f.input :image %>
+	  <%= f.input :image_cache, :as => :hidden %>
     <%= f.input :description %>
     <%= f.button :submit %>
 
 	<% end %>
 </div>
-<ul class="span8">
+<ul class="photos">
 	<% @photos.each do |photo|%>
-		<li>
+		<li data-photo="<%= photo.id%>">
 			<%= image_tag photo.image.thumb %>
+			<%= link_to(photo_path(photo), :method => :delete, :data => { :confirm => 'Really?' }, remote: true) do %>
+        <i class="icon-remove remove"></i>
+      <%- end %> 
 		</li>
 	<% end %>
 </ul>

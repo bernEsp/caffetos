@@ -1,3 +1,41 @@
-// Place all the styles related to the photos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'compass';
+@import 'bootstrap';
+@import 'bootstrap-responsive'; 
+.admin{
+  padding-top: 10%;
+}
+.uploader{
+  @include border-radius(3px);
+  @extend .span3;
+  background: #eee;
+  border: 1px solid #eaeaea; 
+  float: left;       
+}
+
+.photos{
+  @include border-radius(5px);
+  @extend .span8;
+  @extend .offset1;
+  float: left;      
+  list-style-type: none;
+  li{
+    @include border-radius(5px);
+    
+    background: #efefef;
+    border: 1px solid #eaeaea;
+    height: 50px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow: hidden;  
+    width: 50px;
+    .remove{
+      color: red;
+      float: right;
+      margin-right: -11px;
+      margin-top: -62px;
+      z-index: 12; 
+    }
+  }
+}

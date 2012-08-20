@@ -1,4 +1,6 @@
 Micaffetos::Application.routes.draw do
+  devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations => "admins/registrations" } 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -7,6 +7,8 @@ gem "pg"
 gem 'carrierwave'
 gem 'simple_form'
 gem "mini_magick"
+gem "devise"
+gem 'font-awesome-sass-rails' 
 
 
 group :assets do
