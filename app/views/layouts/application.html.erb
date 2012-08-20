@@ -19,6 +19,8 @@
 			</header>
 	    <%= yield %>
 	    <footer>
+		    <%= image_tag "f_logo.png",  :size => '40x40', :class => "fb-logo"%>
+		    <div class="fb-like" data-href="https://www.facebook.com/pages/Caffetos/208509519177979" data-send="true" data-width="450" data-show-faces="true" data-action="recommend" data-font="verdana" data-colorscheme="dark"></div>
 		    <p>
 			    <span>(343) 4270230</span>
 			    Portal Corona 1, San Gabriel Jalisco
@@ -29,5 +31,13 @@
 			</footer>
 	  </div>
 	</div>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=380237722045821";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
