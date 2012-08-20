@@ -4,6 +4,9 @@ gem 'rake', '~> 0.8.7'
 gem "rails", "~>3.2.5"
 gem 'jquery-rails'  
 gem "pg"
+gem 'carrierwave'
+gem 'simple_form'
+gem "mini_magick"
 
 
 group :assets do

@@ -51,7 +51,7 @@ Micaffetos::Application.routes.draw do
    root :to => 'home#index'
    match '/about' => 'home#about' 
    
-   resource :photos
+   resources :photos
 
   # See how all your routes lay out with "rake routes"
 

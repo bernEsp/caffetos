@@ -1,0 +1,17 @@
+<div class="span4">
+	<%= simple_form_for @photo, :html => {:multipart => true} do |f| %>
+
+
+	  <%= f.input :image %>
+    <%= f.input :description %>
+    <%= f.button :submit %>
+
+	<% end %>
+</div>
+<ul class="span8">
+	<% @photos.each do |photo|%>
+		<li>
+			<%= image_tag photo.image.thumb %>
+		</li>
+	<% end %>
+</ul>
