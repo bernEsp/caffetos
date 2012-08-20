@@ -37,6 +37,20 @@
       width: 80px;
     }
   }
+  .about-image{
+    float: left;
+  }
+  .about-text{
+    background-color: #EDECD0;
+    color: #000;
+    float: left;
+    font-style: italic;
+    height: 300px;
+    line-height: 20px;
+    padding: 10px;
+    vertical-align: baseline;
+    width: 338px;    
+  }
 }
 
 .main-menu{
@@ -46,27 +60,37 @@
   list-style-type: none;
   height: 53px;
   .logo{
-    @extend .span2; 
+    @extend .span3; 
     background-color: transparent;
-    margin-top: 0;
+    margin-top: -13px;
+    padding: 0;
     &:hover{
      background-color: transparent; 
     }
   }     
   li{
-    @include border-radius(3px); 
-    color: #f2f2f2; 
+    @include border-top-radius(3px); 
+    color: #40271A;  
     float: left;
     margin-top: 13px;
     margin-left: 15px;
-    padding: 10px 30px;
+    padding: 16px 30px;
     text-align: center;
     width: auto;
     a{
-      color: #f2f2f2;
+      color: #40271A;
+      font-size: 14px;
+      font-weight: bold;
+      &:hover{
+        color: #f2f2f2;  
+      }
     }
     &:hover{
-      background-color: #40271A;   
+      background-color: #40271A;
+      color: #f2f2f2;
+      a{
+        color: #f2f2f2;
+      }   
     }  
   }
 }
