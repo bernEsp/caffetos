@@ -9,7 +9,7 @@ gem 'simple_form'
 gem "mini_magick"
 gem "devise"
 gem 'font-awesome-sass-rails' 
-
+gem 'heroku'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
