@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require slider/jquery.chocoslider
 //= require_tree .

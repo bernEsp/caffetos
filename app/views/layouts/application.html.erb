@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Micaffetos</title>
+  <title>Caffetos</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="caffetos">
+  <div class="container"> 
+	  <div class="row">
+		  <header>
+				<ul class="main-menu">
+					<li class="logo"><%= link_to(image_tag("logo.png"), "/") %></li>
+					<li><%= link_to "Home", "/"%></li>
+					<li><%= link_to "Quienes Somos", "/about"%></li>  
+					<li><%= link_to "Galería", "#"%></li>
+				</ul>
+			</header>
+	    <%= yield %>
+	    <footer>
+		    <p>
+			    <span>(343) 4270230</span>
+			    Portal Corona 1, San Gabriel Jalisco
+			  </p>
+			</footer>
+	  </div>
+	</div>
 </body>
 </html>

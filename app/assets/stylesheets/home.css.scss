@@ -1,0 +1,64 @@
+@import 'compass';
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+.caffetos{
+  background: url("background.png") no-repeat;
+  color: #f2f2f2;
+  font-family: Helvetica, Verdana;
+  font-size: "12px";
+  padding-top: 10%;
+}
+
+.caffetos-slider{
+  @extend .span8;
+  @extend .offset2;
+  float: left;
+  border: 10px solid #40271A;
+  height: 300px;
+  margin-bottom: 0; 
+  overflow-y: hidden;
+}
+
+.main-menu{
+  @extend .span10;
+  @extend .offset2;  
+  float: left; 
+  list-style-type: none;
+  height: 53px;
+  .logo{
+    @extend .span2; 
+    background-color: transparent;
+    margin-top: 0;
+    &:hover{
+     background-color: transparent; 
+    }
+  }     
+  li{
+    @include border-radius(3px); 
+    color: #f2f2f2; 
+    float: left;
+    margin-top: 13px;
+    margin-left: 15px;
+    padding: 10px 30px;
+    text-align: center;
+    width: auto;
+    a{
+      color: #f2f2f2;
+    }
+    &:hover{
+      background-color: #40271A;   
+    }  
+  }
+}
+
+footer{
+  @extend .span8;
+  @extend .offset2;  
+  background-color: #40271A;
+  float: left;        
+  height: 80px;
+  padding: 0 10px;
+  p{
+    float: right;
+  }
+}
