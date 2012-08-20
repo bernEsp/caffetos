@@ -1,5 +1,11 @@
 Micaffetos::Application.routes.draw do
-  devise_for :admins, :controllers => { :sessions => "admins/sessions", :registrations => "admins/registrations" } 
+  devise_for :admins,
+  :path_names => {
+    :sign_in => 'login',
+    :sign_out => 'logout',
+    :sign_up => 'signup'
+  },
+  :controllers => { :sessions => "sessions", :registrations => "registrations" } 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -54,6 +60,8 @@ Micaffetos::Application.routes.draw do
    match '/about' => 'home#about' 
    
    resources :photos
+   
+   match '/gallery' => "photos#gallery"
 
   # See how all your routes lay out with "rake routes"
 

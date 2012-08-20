@@ -9,7 +9,7 @@
   padding-top: 10%;
 }
 
-.caffetos-slider{
+.caffetos-frame{
   @extend .span8;
   @extend .offset2;
   float: left;
@@ -17,6 +17,26 @@
   height: 300px;
   margin-bottom: 0; 
   overflow-y: hidden;
+  .photos{
+    @include border-radius(5px);
+    @extend .span8;
+    @extend .offset1;
+    float: left;      
+    list-style-type: none;
+    margin: 20px 0 0 0; 
+    li{
+      @include border-radius(5px);
+      background: #efefef;
+      border: 1px solid #eaeaea;
+      height: 80px;
+      float: left;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      padding: 4px;
+      overflow: hidden;  
+      width: 80px;
+    }
+  }
 }
 
 .main-menu{

@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
-  before_filter :authenticate_admin!
-  layout "admin"
+  before_filter :authenticate_admin!, :except => :gallery
+  layout "admin", :except => :gallery
   
   def index
     @photos = Photo.all
@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(params[:photo])
     if @photo.save
-      redirect_to photos_path
+      redirect_to admins_photos_path
     else
       render :new
     end
@@ -31,7 +31,7 @@ class PhotosController < ApplicationController
   def update
     @photo = Photo.new(params[:photo]) 
     if @photo.update_attributes(params[:photo])
-      redirect_to photos_path
+      redirect_to admins_photos_path
     else
       render :edit
     end
@@ -43,6 +43,9 @@ class PhotosController < ApplicationController
     respond_to do |format|
       format.js
     end
-  end
+  end 
   
+  def gallery 
+    @photos = Photo.all
+  end
 end
