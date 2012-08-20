@@ -10,6 +10,7 @@ gem "mini_magick"
 gem "devise"
 gem 'font-awesome-sass-rails' 
 gem 'heroku'
+gem "fog", "~> 1.3.1"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

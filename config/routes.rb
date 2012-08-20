@@ -5,7 +5,7 @@ Micaffetos::Application.routes.draw do
     :sign_out => 'logout',
     :sign_up => 'signup'
   },
-  :controllers => { :sessions => "sessions", :registrations => "registrations" } 
+  :controllers => { :sessions => "sessions", :registrations => "registrations", :passwords => "passwords" } 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,8 +58,10 @@ Micaffetos::Application.routes.draw do
   # just remember to delete public/index.html.
    root :to => 'home#index'
    match '/about' => 'home#about' 
-   
-   resources :photos
+   namespace :admin do
+     resources :photos  
+   end
+   resources :photos, :only => :index
    
    match '/gallery' => "photos#gallery"
 

@@ -5,18 +5,25 @@
 .admin{
   padding-top: 10%;
 }
+.secret-box{
+  @extend .well;
+  @extend .offset4;
+  @extend .span4;
+}
 .uploader{
   @include border-radius(3px);
   @extend .span3;
   background: #eee;
   border: 1px solid #eaeaea; 
-  float: left;       
+  float: left;
+  padding: 10px;    
 }
 
 .photos{
   @include border-radius(5px);
   @extend .span8;
   @extend .offset1;
+  background-color: white-smock;
   float: left;      
   list-style-type: none;
   li{

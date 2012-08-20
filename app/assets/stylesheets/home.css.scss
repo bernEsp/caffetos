@@ -107,13 +107,17 @@ footer{
   }
   .fb-like{
     float: left;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 10px;
-    width: 300px;
+    width: 200px;
     
   }
   p{
-    margin-top: 20px;
+    margin-top: 40px;
     float: right;
+  }
+  .logout{ 
+    clear: both;
+    margin-top: -10px;
   }
 }

@@ -1,0 +1,23 @@
+<div class="uploader">
+	<%= simple_form_for [:admin,@photo], :html => {:multipart => true, class:"well"} do |f| %>
+    <h5>Sube aquí las fotos</h5>
+    <%= image_tag(@photo.thumb) if @photo.image? %>
+	  <%= f.input :image %>
+	  <%= f.input :image_cache, :as => :hidden %>
+    <%= f.input :description %>
+    <%= f.button :submit %>
+
+	<% end %>
+	<%= link_to "Cerrar session", destroy_admin_session_path, :method => :delete if current_admin%> 
+</div>
+<ul class="photos">
+	<% @photos.each do |photo|%>
+		<li data-photo="<%= photo.id%>">
+			<%= image_tag photo.image.thumb %>
+			<%= link_to(admin_photo_path(photo), :method => :delete, :data => { :confirm => 'Really?' }, remote: true) do %>
+        <i class="icon-remove remove"></i>
+      <%- end %> 
+		</li>
+	<% end %>
+</ul>
+  
