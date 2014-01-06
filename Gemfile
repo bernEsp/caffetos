@@ -19,3 +19,7 @@ group :assets do
   gem 'bootstrap-sass'
 end
 
+group :production do
+ gem 'therubyracer-heroku'
+end
+
