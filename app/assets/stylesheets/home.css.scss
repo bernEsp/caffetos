@@ -1,6 +1,5 @@
 @import 'compass';
 @import 'bootstrap';
-@import 'bootstrap-responsive';
 .caffetos{
   background: url("background.png") no-repeat;
   color: #f2f2f2;
@@ -14,8 +13,10 @@
   @extend .offset2;
   float: left;
   border: 10px solid #40271A;
+  clear: both;
   height: 300px;
   margin-bottom: 0; 
+  min-width: 750px;
   overflow-y: hidden;
   .photos{
     @include border-radius(5px);
@@ -99,6 +100,7 @@ footer{
   @extend .span8;
   @extend .offset2;  
   background-color: #40271A;
+  clear: both;
   float: left;        
   height: 80px;
   padding: 0 10px;

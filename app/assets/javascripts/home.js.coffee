@@ -1,4 +1,4 @@
-jQuery ->   
+jQuery ->
   $('.caffetos-slider').chocoslider({
     auto: true,
     effect: 'random',
@@ -9,4 +9,5 @@ jQuery ->
     openEffect: 'none',
     closeEffect: 'none'
   })
+  return false
 
