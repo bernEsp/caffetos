@@ -1,8 +1,8 @@
 source "http://rubygems.org"
 ruby '1.9.3'
 
-gem 'rake'
-gem "rails"
+gem 'rake', '~>0.8.7'
+gem "rails", '~>3.2.5'
 gem 'jquery-rails'  
 gem "pg"
 gem 'carrierwave'
