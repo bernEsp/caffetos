@@ -1,4 +1,5 @@
 source "http://rubygems.org"
+ruby '1.9.2-p290'
 
 gem 'rake'
 gem "rails"
@@ -20,5 +21,5 @@ group :assets do
 end
 
 group :production do
- gem 'therubyracer-heroku'
+ gem 'rails_12factor'
 end
