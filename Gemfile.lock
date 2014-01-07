@@ -165,6 +165,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.38)
+    uglifier (2.4.0)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -189,3 +192,4 @@ DEPENDENCIES
   rake (~> 0.8.7)
   sass-rails
   simple_form
+  uglifier
