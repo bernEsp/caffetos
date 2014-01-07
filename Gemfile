@@ -1,7 +1,6 @@
 source "http://rubygems.org"
-gem 'bundler', '> 1.2.0'
 ruby '1.9.3'
-
+gem 'bundler', '>1.2.0.pre'
 gem 'rake', '~>0.8.7'
 gem "rails", '~>3.2.5'
 gem 'jquery-rails'  
