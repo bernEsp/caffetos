@@ -173,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bundler (> 1.2.0)
   carrierwave
   coffee-rails
   compass-rails
