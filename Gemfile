@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-ruby '1.9.2-p290'
+ruby '1.9.3'
 
 gem 'rake'
 gem "rails"
